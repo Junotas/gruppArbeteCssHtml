@@ -1,0 +1,105 @@
+/* Reset and base styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Typography with clamp() */
+h1 { font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 700; color: #2c5530; }
+h2 { font-size: clamp(1.25rem, 3vw, 2rem); font-weight: 600; color: #2c5530; }
+h3 { font-size: clamp(1.125rem, 2.5vw, 1.75rem); font-weight: 600; color: #2c5530; }
+h4 { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 600; color: #2c5530; }
+p  { font-size: clamp(0.875rem, 1.5vw, 1rem); line-height: 1.7; }
+
+/* Main container */
+.main { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+/* Hero section */
+.hero {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+  padding: 4rem 0; min-height: 70vh;
+}
+.hero__content { display: flex; flex-direction: column; gap: 1.5rem; }
+.hero__title { color: #2c5530; margin-bottom: 1rem; }
+.hero__text  { color: #666; font-size: clamp(1rem, 2vw, 1.125rem); }
+
+.hero__button {
+  background-color: #4a7c59; color: #fff; border: none; padding: 1rem 2rem;
+  font-size: clamp(1rem, 2vw, 1.125rem); border-radius: .5rem; cursor: pointer;
+  transition: background-color .3s ease; align-self: flex-start;
+}
+.hero__button:hover { background-color: #3a6b49; }
+
+.hero__image { display: flex; justify-content: center; align-items: center; }
+.hero__img {
+  width: 100%; max-width: 500px; height: auto; border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Features */
+.features {
+  padding: 4rem 0; background-color: #ffffff;
+  margin: 2rem -2rem; padding-left: 2rem; padding-right: 2rem;
+}
+.features__title { text-align: center; margin-bottom: 3rem; color: #2c5530; }
+
+.features__grid { list-style: none; padding-left: 0; margin: 0; }
+.features__grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.feature-card {
+  background-color: #f8f9fa; padding: 2rem; border-radius: 1rem; text-align: center;
+  transition: transform .3s ease, box-shadow .3s ease; border: 1px solid #e9ecef;
+}
+.feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.feature-card__icon { margin-bottom: 1.5rem; }
+.feature-card__img { width: 4rem; height: 4rem; }
+.feature-card__title { margin-bottom: 1rem; color: #2c5530; }
+.feature-card__text  { color: #666; line-height: 1.6; }
+
+/* Gallery */
+.gallery { padding: 4rem 0; }
+.gallery__title { text-align: center; margin-bottom: 3rem; color: #2c5530; }
+
+.gallery__grid { list-style: none; padding-left: 0; margin: 0; }
+.gallery__grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.gallery__item {
+  position: relative; overflow: hidden; border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform .3s ease;
+}
+.gallery__item:hover { transform: scale(1.05); }
+.gallery__img {
+  width: 100%; height: 250px; object-fit: cover; transition: transform .3s ease;
+}
+.gallery__item:hover .gallery__img { transform: scale(1.1); }
+
+/* CTA */
+.cta {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+  padding: 4rem 0; background-color: #ffffff;
+  margin: 2rem -2rem; padding-left: 2rem; padding-right: 2rem; border-radius: 1rem;
+}
+.cta__content { display: flex; flex-direction: column; gap: 1.5rem; }
+.cta__title { color: #2c5530; }
+.cta__text  { color: #666; font-size: clamp(1rem, 2vw, 1.125rem); }
+
+.cta__button {
+  background-color: #4a7c59; color: #fff; border: none; padding: 1rem 2rem;
+  font-size: clamp(1rem, 2vw, 1.125rem); border-radius: .5rem; cursor: pointer;
+  transition: background-color .3s ease; align-self: flex-start;
+}
+.cta__button:hover { background-color: #3a6b49; }
+
+.cta__image { display: flex; justify-content: center; align-items: center; }
+.cta__img {
+  width: 100%; max-width: 400px; height: auto; border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
