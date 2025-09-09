@@ -4,9 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Planned Planthood - Planera dina planteringar</title>
-  <link rel="stylesheet" href="index1.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo" aria-label="Planned Planthood">
+        <img src="assets/icons/Logo.svg" alt="Planned Planthood logotyp" class="nav__logo-img">
+        <h1 class="nav__title">Planned Planthood</h1>
+      </a>
+      <ul class="nav__menu">
+        <li class="nav__item">
+          <a href="index.html" class="nav__link nav__link--active">Hem</a>
+        </li>
+        <li class="nav__item">
+          <a href="mina-sidor.html" class="nav__link">Mina sidor</a>
+        </li>
+        <li class="nav__item">
+          <a href="#kontakt" class="nav__link">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
   <main class="main">
     <section class="hero">
       <article class="hero__content">
@@ -14,6 +34,7 @@
         <p class="hero__text">Nyköpt hus med trädgård, spännande kolonilott eller ett öppet fält som behöver lite kärlek? Det är dags att börja planera sina planteringar!</p>
         <button class="hero__button">Kom igång</button>
       </article>
+      <!-- DIV #1 (kept intentionally) -->
       <div class="hero__image">
         <img src="assets/images/hand.jpeg" alt="Hand som håller i jord och växter" class="hero__img">
       </div>
@@ -31,6 +52,7 @@
             <p class="feature-card__text">Få bättre koll på vilken planta som ska sås vilken dag på vårkanten.</p>
           </article>
         </li>
+
         <li>
           <article class="feature-card">
             <figure class="feature-card__icon">
@@ -40,6 +62,7 @@
             <p class="feature-card__text">Undvik oordning bland odlingar och odlare i kolonilotten.</p>
           </article>
         </li>
+
         <li>
           <article class="feature-card">
             <figure class="feature-card__icon">
@@ -55,12 +78,36 @@
     <section class="gallery">
       <h3 class="gallery__title">Inspiration från våra användare</h3>
       <ul class="gallery__grid">
-        <li><figure class="gallery__item"><img src="assets/images/ärta.avif" alt="Färska ärtor på växt" class="gallery__img"></figure></li>
-        <li><figure class="gallery__item"><img src="assets/images/gurka.avif" alt="Mogen gurka på växt" class="gallery__img"></figure></li>
-        <li><figure class="gallery__item"><img src="assets/images/tomat.avif" alt="Röda tomater på växt" class="gallery__img"></figure></li>
-        <li><figure class="gallery__item"><img src="assets/images/tomater.avif" alt="Många tomater i korg" class="gallery__img"></figure></li>
-        <li><figure class="gallery__item"><img src="assets/images/massagrönsaker.avif" alt="Olika grönsaker i korg" class="gallery__img"></figure></li>
-        <li><figure class="gallery__item"><img src="assets/images/lilagrönsak.avif" alt="Lila grönsaker" class="gallery__img"></figure></li>
+        <li>
+          <figure class="gallery__item">
+            <img src="assets/images/ärta.avif" alt="Färska ärtor på växt" class="gallery__img">
+          </figure>
+        </li>
+        <li>
+          <figure class="gallery__item">
+            <img src="assets/images/gurka.avif" alt="Mogen gurka på växt" class="gallery__img">
+          </figure>
+        </li>
+        <li>
+          <figure class="gallery__item">
+            <img src="assets/images/tomat.avif" alt="Röda tomater på växt" class="gallery__img">
+          </figure>
+        </li>
+        <li>
+          <figure class="gallery__item">
+            <img src="assets/images/tomater.avif" alt="Många tomater i korg" class="gallery__img">
+          </figure>
+        </li>
+        <li>
+          <figure class="gallery__item">
+            <img src="assets/images/massagrönsaker.avif" alt="Olika grönsaker i korg" class="gallery__img">
+          </figure>
+        </li>
+        <li>
+          <figure class="gallery__item">
+            <img src="assets/images/lilagrönsak.avif" alt="Lila grönsaker" class="gallery__img">
+          </figure>
+        </li>
       </ul>
     </section>
 
@@ -70,10 +117,36 @@
         <p class="cta__text">Skapa din första plantering idag och få bättre koll på din kolonilott.</p>
         <button class="cta__button">Starta planering</button>
       </article>
+      <!-- DIV #2 (kept intentionally) -->
       <div class="cta__image">
         <img src="assets/images/plockar.avif" alt="Person som plockar grönsaker" class="cta__img">
       </div>
     </section>
   </main>
+
+  <footer class="footer" id="kontakt">
+    <section class="footer__content">
+      <section class="footer__section">
+        <h4 class="footer__title">Kontakt</h4>
+        <address class="footer__contact">
+          <p class="footer__contact-item">
+            <img src="assets/icons/telephone.svg" alt="" class="footer__icon" aria-hidden="true">
+            <span class="footer__text">+46 123 456 789</span>
+          </p>
+          <p class="footer__contact-item">
+            <img src="assets/icons/envelope.svg" alt="" class="footer__icon" aria-hidden="true">
+            <span class="footer__text">info@plannedplanthood.se</span>
+          </p>
+        </address>
+      </section>
+      <section class="footer__section">
+        <h4 class="footer__title">Följ oss</h4>
+        <p class="footer__text">Få tips och inspiration för din trädgård</p>
+      </section>
+    </section>
+    <section class="footer__bottom">
+      <p class="footer__copyright">&copy; 2024 Planned Planthood. Alla rättigheter förbehållna.</p>
+    </section>
+  </footer>
 </body>
 </html>
