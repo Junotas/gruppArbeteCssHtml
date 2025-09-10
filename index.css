@@ -81,7 +81,7 @@ p  { font-size: clamp(0.875rem, 1.5vw, 1rem); line-height: 1.7; }
   gap: 2rem;
 }
 .feature-card {
-  background-color: #f8f9fa; padding: 2rem; border-radius: 1rem; text-align: center;
+  background-color: #ededed; padding: 2rem; border-radius: 1rem; text-align: center;
   transition: transform .3s ease, box-shadow .3s ease; border: 1px solid #e9ecef;
 }
 .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
