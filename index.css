@@ -231,16 +231,16 @@ li {
 
 .card__glyph {
   position: absolute;
-  right: 0.75rem;
-  top: 0.75rem;
-  width: 44px;
-  height: 44px;
+  inset: 0;                     /* fyller hela card__media */
   display: grid;
   place-items: center;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 999px;
-  padding: 0.35rem;
 }
+
+.card__glyph img {
+  width: 72px;                   /* större, centralt placerad */
+  height: 72px;
+}
+
 /* KORTETS UNDERSIDA: grid istället för flex */
 .card__body{
   display: grid;
