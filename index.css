@@ -87,7 +87,7 @@ li {
   grid-auto-rows: clamp(160px, 22vw, 240px);
 }
 .masthead__photo {
-  position: relative; /* viktigt för overlay */
+  position: relative;
   overflow: hidden;
   grid-column: 1 / 2;
   grid-row: 1 / span 2;
@@ -351,41 +351,57 @@ li {
   margin-top: 2rem;
   position: relative;
 }
-
+/* Begränsa höjden på footer-bilden */
 .footer__flex {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  min-height: 260px;
+  align-items: stretch;
+  /* min 220px, helst ~32vh, max 340px */
+  height: clamp(220px, 32vh, 340px);
   overflow: hidden;
 }
-
-.footer__panel img {
+/* Bilden följer containerhöjden */
+.footer__panel > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.7);
 }
-
-/* overlay text */
-.footer__overlay {
+.footer__panel > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.footer__panel::before {
+  content: "";
   position: absolute;
   inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.65) 50%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+.footer__overlay {
+  position: absolute;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 1.25rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
   gap: 0.6rem;
-  padding: 1.25rem;
   z-index: 2;
+  color: var(--white);
 }
-
 .footer__title {
-  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  font-size: clamp(1.5rem, 2.8vw, 2.25rem);
   font-weight: 700;
 }
-
 .contact {
   font-style: normal;
 }
@@ -393,7 +409,6 @@ li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--white);
   opacity: 0.95;
 }
 .contact__icon {
@@ -401,29 +416,46 @@ li {
   height: 18px;
   filter: brightness(0) invert(1);
 }
-
-/* logga overlay */
 .footer__heart {
   position: absolute;
   inset: 0;
   display: grid;
   place-items: center;
-  z-index: 1; /* bakom overlay-text */
+  z-index: 2;
+  pointer-events: none;
 }
-
+/* Loggans storlek anpassas till lägre höjd */
 .footer__heart img {
-  width: 140px;
-  height: 140px;
-  opacity: 0.9;
-  filter: brightness(0) invert(1);
+  width: clamp(80px, 10vw, 140px);
+  height: auto;
 }
-
 .footer__copy {
   text-align: center;
   padding: 1rem;
   border-top: 1px solid var(--green-700);
+  color: var(--white);
 }
 
+/* ===== Back to top ===== */
+.backtop {
+  margin: 0;
+  background: var(--white);
+  text-align: center;
+  padding: 0.65rem 1rem;
+  border-top: 1px solid var(--neutral-200);
+  border-bottom: 1px solid var(--neutral-200);
+}
+.backtop__link {
+  color: var(--ink-800);
+  text-decoration: none;
+  font-weight: 500;
+}
+.backtop__link:hover,
+.backtop__link:focus {
+  text-decoration: underline;
+  color: var(--teal);
+  outline: none;
+}
 
 /* ===== Responsive ===== */
 @media (max-width: 1000px) {
@@ -445,7 +477,6 @@ li {
   }
 }
 @media (max-width: 640px) {
-  /* Pyramid-header i mobil */
   .masthead__grid {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 160px;
@@ -462,7 +493,6 @@ li {
     grid-column: 2;
     grid-row: 2;
   }
-
   .tabs__list {
     flex-wrap: wrap;
     justify-content: center;
@@ -471,36 +501,17 @@ li {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
-  .footer__grid {
-    grid-template-columns: 1fr;
+  .footer__flex {
+    height: clamp(200px, 36vh, 280px);
+  }
+  .footer__overlay {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
   }
 }
-
-/* Fokus (a11y) */
 a:focus,
 button:focus {
   outline: 2px solid var(--teal);
   outline-offset: 2px;
-}
-
-/* ===== Back to top ===== */
-.backtop {
-  text-align: center;
-  margin: 1rem 0 2rem;
-}
-.backtop__link {
-  display: inline-block;
-  background: var(--teal);
-  color: var(--white);
-  padding: 0.6rem 1.2rem;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: background 0.3s ease;
-}
-.backtop__link:hover,
-.backtop__link:focus {
-  background: var(--teal-700);
-  outline: none;
 }
