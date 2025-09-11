@@ -11,9 +11,11 @@ ul {
   font-size: 18px;
   font-family: sans-serif;
 }
-.rubrik{
-    font-style: oblique;
-    color: white;
+
+.rubrik {
+  font-style: oblique;
+  color: white;
+  margin-top: 45px;
 }
 
 ul>li {
@@ -61,7 +63,7 @@ ul>li>a {
   background-position: center;
   object-fit: cover;
   background-size: cover;
-
+  height: 400px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -69,7 +71,7 @@ ul>li>a {
 }
 
 .header-image>img {
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .plantering {
@@ -78,8 +80,9 @@ ul>li>a {
   padding: 4rem;
 
 }
-.form-rubrik{
-      margin-bottom: 30px;
+
+.form-rubrik {
+  margin-bottom: 30px;
 }
 
 .plantering>button {
