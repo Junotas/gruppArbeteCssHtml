@@ -241,25 +241,44 @@ li {
   border-radius: 999px;
   padding: 0.35rem;
 }
-.card__body {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  justify-content: space-between;
-  padding: 0.9rem 1rem;
+/* KORTETS UNDERSIDA: grid istället för flex */
+.card__body{
+  display: grid;
+  grid-template-columns: 1fr auto;                 /* textkolumn + knapp */
+  grid-template-areas:
+    "title action"
+    "meta  action";
+  column-gap: .75rem;
+  row-gap: .25rem;
+  align-items: start;
+  padding: .9rem 1rem;
 }
-.card__title {
-  font-size: 1rem;
-  color: #1f2937;
+
+.card__title{ 
+  grid-area: title; 
+  margin: 0; 
+  font-size: 1rem; 
+  color:#1f2937;
 }
-.card__meta {
-  font-size: 0.9rem;
+
+.card__meta{ 
+  grid-area: meta; 
+  margin: 0; 
+  font-size:.9rem; 
   color: var(--muted);
 }
 
-.plans__more {
-  text-align: center;
-  margin-top: 0.5rem;
+/* Lägg knappen i högra kolumnen, top-aligned */
+.card__body .chip--danger{
+  grid-area: action;
+  align-self: start;
+}
+
+/* (valfritt) bättre textbeteende vid trånga ytor */
+.card__title, .card__meta{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* ===== History ===== */
@@ -406,7 +425,8 @@ li {
     justify-content: center;
   }
   .cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
   .footer__grid {
     grid-template-columns: 1fr;
