@@ -15,16 +15,16 @@
   --brown: #9c6a56;
 
   /* neutrals */
-  --white: #ffffff;
-  --black: #000000;
+  --white: #fff;
+  --black: #000;
   --bg: #f5f6f7;
-  --ink: #333333;
-  --ink-800: #222222;
+  --ink: #333;
+  --ink-800: #222;
   --ink-title: #1f2937;
   --muted: #6b7280;
 
   /* surfaces & accents */
-  --card: #ffffff;
+  --card: #fff;
   --chip: #e8f5e8;
   --danger: #e05252;
 
@@ -32,13 +32,9 @@
   --border-soft: #e5efe6;
   --border: #e9ecef;
   --rule: #dbe8db;
-  --neutral-200: #eeeeee;
+  --neutral-200: #eee;
   --tint: #f0f5f0;
   --tint-2: #e6f4ea;
-
-  /* overlays */
-  --overlay-top: rgba(0, 0, 0, 0.05);
-  --overlay-bottom: rgba(0, 0, 0, 0.45);
 }
 
 body.page {
@@ -89,7 +85,7 @@ li {
 .masthead__photo {
   position: relative;
   overflow: hidden;
-  grid-column: 1 / 2;
+  grid-column: 1/2;
   grid-row: 1 / span 2;
 }
 .masthead__photo img {
@@ -134,7 +130,7 @@ li {
   --size: 72px;
   width: var(--size);
   height: var(--size);
-  background: var(--white);
+  background: #fff;
   -webkit-mask: var(--icon-url) center/contain no-repeat;
   mask: var(--icon-url) center/contain no-repeat;
 }
@@ -142,9 +138,9 @@ li {
   --size: 160px;
 }
 
-/* Tabs (Flex) */
+/* Tabs */
 .tabs {
-  background: var(--white);
+  background: #fff;
   border-top: 1px solid var(--neutral-200);
   border-bottom: 1px solid var(--neutral-200);
 }
@@ -172,14 +168,14 @@ li {
   font-weight: 600;
 }
 
-/* Main container */
+/* Container */
 .main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem 3rem;
 }
 
-/* ===== Season (Grid) ===== */
+/* ===== Season ===== */
 .season {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -204,7 +200,7 @@ li {
   padding: 0.75rem 1.25rem;
   border-radius: 10px;
   background: var(--teal);
-  color: var(--white);
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
 }
@@ -216,7 +212,7 @@ li {
 }
 .btn--ghost {
   background: var(--teal);
-  color: var(--white);
+  color: #fff;
   border: none;
 }
 .btn--ghost:hover {
@@ -242,7 +238,7 @@ li {
 .card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 16px;
   overflow: hidden;
 }
 .card__media {
@@ -257,7 +253,7 @@ li {
   position: absolute;
   left: 0.75rem;
   bottom: 0.75rem;
-  background: var(--white);
+  background: #fff;
   border: 1px solid var(--border-soft);
 }
 .chip {
@@ -268,16 +264,16 @@ li {
   font-size: 0.85rem;
 }
 .chip--date {
-  background: var(--white);
+  background: #fff;
 }
 .chip--danger {
   background: var(--danger);
-  color: var(--white);
+  color: #fff;
   border: 0;
   cursor: pointer;
 }
 
-/* Centrerad glyph på bilden */
+/* glyph centrerad */
 .card__glyph {
   position: absolute;
   inset: 0;
@@ -289,7 +285,7 @@ li {
   height: 72px;
 }
 
-/* Kortets underdel */
+/* underdel */
 .card__body {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -347,36 +343,37 @@ li {
 /* ===== Footer ===== */
 .footer {
   background: var(--green);
-  color: var(--white);
+  color: #fff;
   margin-top: 2rem;
   position: relative;
 }
-/* Begränsa höjden på footer-bilden */
+
+/* Komprimerad, förutsägbar höjd (desktop) */
 .footer__flex {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: stretch;
-  /* min 220px, helst ~32vh, max 340px */
-  height: clamp(220px, 32vh, 340px);
+  /* min 180px, föredraget 28vw, max 260px (oavsett viewport) */
+  height: clamp(180px, 28vw, 260px);
   overflow: hidden;
 }
-/* Bilden följer containerhöjden */
-.footer__panel > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
+/* Bild */
 .footer__panel > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-.footer__panel::before {
+
+/* Mörk vänstersida (50%) */
+.footer__flex::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
+  pointer-events: none;
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.65) 0%,
@@ -384,23 +381,23 @@ li {
     rgba(0, 0, 0, 0) 50%,
     rgba(0, 0, 0, 0) 100%
   );
-  z-index: 1;
-  pointer-events: none;
 }
+
+/* Text-overlay: rubrik mitt-vänster, kontakt i nederkant */
 .footer__overlay {
   position: absolute;
-  left: 1.25rem;
-  right: 1.25rem;
-  bottom: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  inset: 0;
   z-index: 2;
-  color: var(--white);
+  color: #fff;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  padding: 1.25rem;
 }
 .footer__title {
-  font-size: clamp(1.5rem, 2.8vw, 2.25rem);
+  font-size: clamp(1.4rem, 2.6vw, 2.25rem);
   font-weight: 700;
+  max-width: 20ch;
 }
 .contact {
   font-style: normal;
@@ -416,30 +413,37 @@ li {
   height: 18px;
   filter: brightness(0) invert(1);
 }
+
+/* Hjärt-ikon: i mitten av högra halvan (desktop) */
 .footer__heart {
   position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
   z-index: 2;
   pointer-events: none;
+  display: grid;
+  place-items: center;
 }
-/* Loggans storlek anpassas till lägre höjd */
 .footer__heart img {
-  width: clamp(80px, 10vw, 140px);
+  width: clamp(90px, 10vw, 140px);
   height: auto;
+  opacity: 0.95;
+  filter: brightness(0) invert(1);
 }
+
+/* Copyrad */
 .footer__copy {
   text-align: center;
   padding: 1rem;
   border-top: 1px solid var(--green-700);
-  color: var(--white);
+  color: #fff;
 }
 
-/* ===== Back to top ===== */
+/* ===== Back to top (smal vit list) ===== */
 .backtop {
   margin: 0;
-  background: var(--white);
+  background: #fff;
   text-align: center;
   padding: 0.65rem 1rem;
   border-top: 1px solid var(--neutral-200);
@@ -476,13 +480,15 @@ li {
     margin: 0 auto;
   }
 }
+
 @media (max-width: 640px) {
+  /* Pyramid-header i mobil */
   .masthead__grid {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 160px;
   }
   .masthead__photo {
-    grid-column: 1 / -1;
+    grid-column: 1/-1;
     grid-row: 1;
   }
   .masthead__tile--brown {
@@ -493,6 +499,7 @@ li {
     grid-column: 2;
     grid-row: 2;
   }
+
   .tabs__list {
     flex-wrap: wrap;
     justify-content: center;
@@ -501,15 +508,18 @@ li {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
+
+  /* Lägre, fastare footer i mobil + centrera hjärtat */
   .footer__flex {
-    height: clamp(200px, 36vh, 280px);
+    height: clamp(180px, 48vw, 220px);
   }
-  .footer__overlay {
-    left: 1rem;
-    right: 1rem;
-    bottom: 1rem;
+  .footer__heart {
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
+
+/* Fokus (a11y) */
 a:focus,
 button:focus {
   outline: 2px solid var(--teal);
