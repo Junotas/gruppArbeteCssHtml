@@ -1,150 +1,284 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Planned Planthood - Planera dina planteringar</title>
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <header class="header">
-    <nav class="nav">
-      <a href="index.html" class="nav__logo" aria-label="Planned Planthood">
-        <img src="assets/icons/Logo.svg" alt="Planned Planthood logotyp" class="nav__logo-img">
-        <h1 class="nav__title">Planned Planthood</h1>
-      </a>
-      <ul class="nav__menu">
-        <li class="nav__item">
-          <a href="index.html" class="nav__link nav__link--active">Hem</a>
-        </li>
-        <li class="nav__item">
-          <a href="mina.html" class="nav__link">Mina sidor</a>
-        </li>
-        <li class="nav__item">
-          <a href="#kontakt" class="nav__link">Kontakt</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="main">
-    <section class="hero">
-      <article class="hero__content">
-        <h2 class="hero__title">Planera dina planteringar</h2>
-        <p class="hero__text">Nyköpt hus med trädgård, spännande kolonilott eller ett öppet fält som behöver lite kärlek? Det är dags att börja planera sina planteringar!</p>
-        <button class="hero__button">Kom igång</button>
-      </article>
-      <div class="hero__image">
-        <img src="assets/images/hand.jpeg" alt="Hand som håller i jord och växter" class="hero__img">
-      </div>
-    </section>
-
-    <section class="features">
-      <h3 class="features__title">Varför välja Planned Planthood?</h3>
-      <ul class="features__grid">
-        <li>
-          <article class="feature-card">
-            <figure class="feature-card__icon">
-              <img src="assets/icons/plant.svg" alt="Växt ikon" class="feature-card__img">
-            </figure>
-            <h4 class="feature-card__title">Organiserad odling</h4>
-            <p class="feature-card__text">Få bättre koll på vilken planta som ska sås vilken dag på vårkanten.</p>
-          </article>
-        </li>
-
-        <li>
-          <article class="feature-card">
-            <figure class="feature-card__icon">
-              <img src="assets/icons/seedling.svg" alt="Grodling ikon" class="feature-card__img">
-            </figure>
-            <h4 class="feature-card__title">Perfekt för kollektiv</h4>
-            <p class="feature-card__text">Undvik oordning bland odlingar och odlare i kolonilotten.</p>
-          </article>
-        </li>
-
-        <li>
-          <article class="feature-card">
-            <figure class="feature-card__icon">
-              <img src="assets/icons/Vectorseedpackage.svg" alt="Fröpaket ikon" class="feature-card__img">
-            </figure>
-            <h4 class="feature-card__title">Enkel planering</h4>
-            <p class="feature-card__text">En enklare lösning för att planera dina planteringar effektivt.</p>
-          </article>
-        </li>
-      </ul>
-    </section>
-
-    <section class="gallery">
-      <h3 class="gallery__title">Inspiration från våra användare</h3>
-      <ul class="gallery__grid">
-        <li>
-          <figure class="gallery__item">
-            <img src="assets/images/ärta.avif" alt="Färska ärtor på växt" class="gallery__img">
-          </figure>
-        </li>
-        <li>
-          <figure class="gallery__item">
-            <img src="assets/images/gurka.avif" alt="Mogen gurka på växt" class="gallery__img">
-          </figure>
-        </li>
-        <li>
-          <figure class="gallery__item">
-            <img src="assets/images/tomat.avif" alt="Röda tomater på växt" class="gallery__img">
-          </figure>
-        </li>
-        <li>
-          <figure class="gallery__item">
-            <img src="assets/images/tomater.avif" alt="Många tomater i korg" class="gallery__img">
-          </figure>
-        </li>
-        <li>
-          <figure class="gallery__item">
-            <img src="assets/images/massagrönsaker.avif" alt="Olika grönsaker i korg" class="gallery__img">
-          </figure>
-        </li>
-        <li>
-          <figure class="gallery__item">
-            <img src="assets/images/lilagrönsak.avif" alt="Lila grönsaker" class="gallery__img">
-          </figure>
-        </li>
-      </ul>
-    </section>
-
-    <section class="cta">
-      <article class="cta__content">
-        <h3 class="cta__title">Redo att börja planera?</h3>
-        <p class="cta__text">Skapa din första plantering idag och få bättre koll på din kolonilott.</p>
-        <button class="cta__button">Starta planering</button>
-      </article>
-      <div class="cta__image">
-        <img src="assets/images/plockar.avif" alt="Person som plockar grönsaker" class="cta__img">
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer" id="kontakt">
-    <section class="footer__content">
-      <section class="footer__section">
-        <h4 class="footer__title">Kontakt</h4>
-        <address class="footer__contact">
-          <p class="footer__contact-item">
-            <img src="assets/icons/telephone.svg" alt="" class="footer__icon" aria-hidden="true">
-            <span class="footer__text">+46 123 456 789</span>
-          </p>
-          <p class="footer__contact-item">
-            <img src="assets/icons/envelope.svg" alt="" class="footer__icon" aria-hidden="true">
-            <span class="footer__text">info@plannedplanthood.se</span>
-          </p>
-        </address>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planned Planthood – Start</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="page" id="top">
+    <header class="masthead">
+      <!-- Mosaikband (Grid) -->
+      <section class="masthead__grid">
+        <figure class="masthead__photo">
+          <img
+            src="assets/images/hand.jpeg"
+            alt="Hand som håller jord och småplantor"
+          />
+        </figure>
+        <section class="masthead__tile masthead__tile--brown">
+          <span
+            class="icon-mask"
+            aria-hidden="true"
+            style="--icon-url: url('assets/icons/seedling.svg')"
+          ></span>
+        </section>
+        <section class="masthead__tile masthead__tile--teal">
+          <span
+            class="icon-mask"
+            aria-hidden="true"
+            style="--icon-url: url('assets/icons/Vectorseedpackage.svg')"
+          ></span>
+        </section>
       </section>
-      <section class="footer__section">
-        <h4 class="footer__title">Följ oss</h4>
-        <p class="footer__text">Få tips och inspiration för din trädgård</p>
+
+      <!-- Fliknavigering (Flex) -->
+      <nav class="tabs" aria-label="Huvudnavigering">
+        <ul class="tabs__list">
+          <li class="tabs__item">
+            <a class="tabs__link tabs__link--active" href="#planer">Planer</a>
+          </li>
+          <li class="tabs__item">
+            <a class="tabs__link" href="#historik">Historik</a>
+          </li>
+          <li class="tabs__item">
+            <a class="tabs__link" href="#tips">Tips</a>
+          </li>
+          <li class="tabs__item">
+            <a class="tabs__link" href="#kontakt">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main" id="planer">
+      <h1 class="title">PLANNED PLANTHOOD</h1>
+
+      <!-- Säsong att så -->
+      <section class="season" id="tips" aria-labelledby="season-title">
+        <figure class="season__icon">
+          <span
+            class="icon-mask icon-mask--lg"
+            aria-hidden="true"
+            style="--icon-url: url('assets/icons/plant.svg')"
+          ></span>
+        </figure>
+        <article class="season__content">
+          <h2 id="season-title" class="season__title">Säsong att så</h2>
+          <p class="season__text">
+            Våren är äntligen här i kollektivet. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Venenatis arcu nunc consectetur neque.
+          </p>
+          <a class="btn btn--pill" href="#tips">SÅ-TIPS</a>
+        </article>
       </section>
-    </section>
-    <section class="footer__bottom">
-      <p class="footer__copyright">&copy; 2025 Planned Planthood. Alla rättigheter förbehållna.</p>
-    </section>
-  </footer>
-</body>
+
+      <hr class="divider" aria-hidden="true" />
+
+      <!-- Planerade planteringar -->
+      <section class="plans" aria-labelledby="plans-title">
+        <h3 id="plans-title" class="section__title">
+          Våra planerade planteringar:
+        </h3>
+
+        <ul class="cards">
+          <li class="card">
+            <figure class="card__media">
+              <img
+                class="card__img"
+                src="assets/images/gurka.avif"
+                alt="Gurka på växt"
+              />
+              <span class="card__badge chip chip--date">15 april 2024</span>
+              <span class="card__glyph" aria-hidden="true"
+                ><img src="assets/icons/plant.svg" alt=""
+              /></span>
+            </figure>
+            <figcaption class="card__body">
+              <h4 class="card__title">Gurka</h4>
+              <p class="card__meta">Rico Cocío</p>
+              <button class="chip chip--danger" type="button">TA BORT</button>
+            </figcaption>
+          </li>
+
+          <li class="card">
+            <figure class="card__media">
+              <img
+                class="card__img"
+                src="assets/images/tomat.avif"
+                alt="Röda tomater på planta"
+              />
+              <span class="card__badge chip chip--date">1 april 2024</span>
+              <span class="card__glyph" aria-hidden="true"
+                ><img src="assets/icons/plant.svg" alt=""
+              /></span>
+            </figure>
+            <figcaption class="card__body">
+              <h4 class="card__title">Tomat</h4>
+              <p class="card__meta">Roma A</p>
+              <button class="chip chip--danger" type="button">TA BORT</button>
+            </figcaption>
+          </li>
+
+          <li class="card">
+            <figure class="card__media">
+              <img
+                class="card__img"
+                src="assets/images/ärta.avif"
+                alt="Färska ärtor på växt"
+              />
+              <span class="card__badge chip chip--date">1 april 2024</span>
+              <span class="card__glyph" aria-hidden="true"
+                ><img src="assets/icons/plant.svg" alt=""
+              /></span>
+            </figure>
+            <figcaption class="card__body">
+              <h4 class="card__title">Sockerärtor</h4>
+              <p class="card__meta">Frippe</p>
+              <button class="chip chip--danger" type="button">TA BORT</button>
+            </figcaption>
+          </li>
+
+          <li class="card">
+            <figure class="card__media">
+              <img
+                class="card__img"
+                src="assets/images/lilagrönsak.avif"
+                alt="Lila rotsaker"
+              />
+              <span class="card__badge chip chip--date">1 april 2024</span>
+              <span class="card__glyph" aria-hidden="true"
+                ><img src="assets/icons/plant.svg" alt=""
+              /></span>
+            </figure>
+            <figcaption class="card__body">
+              <h4 class="card__title">Majrova</h4>
+              <p class="card__meta">Emma på lån</p>
+              <button class="chip chip--danger" type="button">TA BORT</button>
+            </figcaption>
+          </li>
+
+          <li class="card">
+            <figure class="card__media">
+              <img
+                class="card__img"
+                src="assets/images/tomater.avif"
+                alt="Tomater i korg"
+              />
+              <span class="card__badge chip chip--date">1 april 2024</span>
+              <span class="card__glyph" aria-hidden="true"
+                ><img src="assets/icons/plant.svg" alt=""
+              /></span>
+            </figure>
+            <figcaption class="card__body">
+              <h4 class="card__title">Squash</h4>
+              <p class="card__meta">Perra J</p>
+              <button class="chip chip--danger" type="button">TA BORT</button>
+            </figcaption>
+          </li>
+
+          <li class="card">
+            <figure class="card__media">
+              <img
+                class="card__img"
+                src="assets/images/massagrönsaker.avif"
+                alt="Olika grönsaker i korg"
+              />
+              <span class="card__badge chip chip--date">1 april 2024</span>
+              <span class="card__glyph" aria-hidden="true"
+                ><img src="assets/icons/plant.svg" alt=""
+              /></span>
+            </figure>
+            <figcaption class="card__body">
+              <h4 class="card__title">Blandat</h4>
+              <p class="card__meta">Kollektivet</p>
+              <button class="chip chip--danger" type="button">TA BORT</button>
+            </figcaption>
+          </li>
+        </ul>
+
+        <p class="plans__more"><a class="btn" href="#">Visa fler</a></p>
+      </section>
+
+      <!-- Tidigare odlingar -->
+      <section class="history" id="historik" aria-labelledby="history-title">
+        <article class="history__text">
+          <h3 id="history-title" class="section__title">
+            Våra tidigare odlingar
+          </h3>
+          <p class="history__lead">
+            Lorem ipsum dolor sit amet. Sit venenatis arcu nunc consectetur
+            neque. Vel amet metus amet eu elit.
+          </p>
+          <a class="btn btn--ghost" href="#">Planterade plantor</a>
+        </article>
+        <figure class="history__icon">
+          <span
+            class="icon-mask icon-mask--lg"
+            aria-hidden="true"
+            style="--icon-url: url('assets/icons/seedling.svg')"
+          ></span>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="footer" id="kontakt">
+      <!-- Två fotopaneler (Grid) -->
+      <section class="footer__grid">
+        <figure class="footer__panel footer__panel--left">
+          <img
+            src="assets/images/massagrönsaker.avif"
+            alt="Grönsaker i skuggig trädgård"
+          />
+          <figcaption class="footer__overlay">
+            <h3 class="footer__title">Vi hörs!</h3>
+            <address class="contact">
+              <p class="contact__row">
+                <img
+                  class="contact__icon"
+                  src="assets/icons/telephone.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span>0701-234567</span>
+              </p>
+              <p class="contact__row">
+                <img
+                  class="contact__icon"
+                  src="assets/icons/envelope.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span>mail@mail.se</span>
+              </p>
+            </address>
+          </figcaption>
+        </figure>
+
+        <figure class="footer__panel footer__panel--right">
+          <img src="assets/images/hand.jpeg" alt="Händer som håller planta" />
+          <figcaption class="footer__heart" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 21s-7.5-4.6-9.6-8.7C.4 9.8 2.1 6 5.6 6c2 0 3.2 1 4.4 2.5C11.2 7 12.4 6 14.4 6c3.5 0 5.2 3.8 3.2 6.3C19.5 16.4 12 21 12 21z"
+                fill="none"
+                stroke="#fff"
+                stroke-width="1.8"
+              />
+            </svg>
+            <span class="vh">Dekorativ hjärtikon</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <p class="footer__copy">
+        &copy; 2025 Planned Planthood. Alla rättigheter förbehållna.
+      </p>
+    </footer>
+
+    <!-- Till toppen-knapp -->
+    <p class="backtop">
+      <a href="#top" class="backtop__link">Till toppen av sidan ↑</a>
+    </p>
+  </body>
 </html>
