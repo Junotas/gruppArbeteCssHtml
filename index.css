@@ -59,11 +59,13 @@ li {
 /* ===== Masthead (Grid) ===== */
 .masthead__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-auto-rows: 220px;
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: clamp(160px, 22vw, 240px);
 }
 .masthead__photo {
   overflow: hidden;
+  grid-column: 1 / 2;
+  grid-row: 1 / span 2; /* täcker två rader */
 }
 .masthead__photo img {
   width: 100%;
@@ -76,9 +78,13 @@ li {
 }
 .masthead__tile--brown {
   background: var(--brown);
+  grid-column: 2;
+  grid-row: 1;
 }
 .masthead__tile--teal {
   background: var(--teal);
+  grid-column: 2;
+  grid-row: 2;
 }
 
 /* Ikonfärg via CSS-mask (gör externa SVG vita) */
@@ -231,20 +237,19 @@ li {
 
 .card__glyph {
   position: absolute;
-  inset: 0;                     /* fyller hela card__media */
+  inset: 0;
   display: grid;
   place-items: center;
 }
-
 .card__glyph img {
-  width: 72px;                   /* större, centralt placerad */
+  width: 72px;
   height: 72px;
 }
 
-/* KORTETS UNDERSIDA: grid istället för flex */
-.card__body{
+/* KORTETS UNDERSIDA */
+.card__body {
   display: grid;
-  grid-template-columns: 1fr auto;                 /* textkolumn + knapp */
+  grid-template-columns: 1fr auto;
   grid-template-areas:
     "title action"
     "meta  action";
@@ -253,29 +258,23 @@ li {
   align-items: start;
   padding: .9rem 1rem;
 }
-
-.card__title{ 
-  grid-area: title; 
-  margin: 0; 
-  font-size: 1rem; 
+.card__title {
+  grid-area: title;
+  margin: 0;
+  font-size: 1rem;
   color:#1f2937;
 }
-
-.card__meta{ 
-  grid-area: meta; 
-  margin: 0; 
-  font-size:.9rem; 
+.card__meta {
+  grid-area: meta;
+  margin: 0;
+  font-size:.9rem;
   color: var(--muted);
 }
-
-/* Lägg knappen i högra kolumnen, top-aligned */
-.card__body .chip--danger{
+.card__body .chip--danger {
   grid-area: action;
   align-self: start;
 }
-
-/* (valfritt) bättre textbeteende vid trånga ytor */
-.card__title, .card__meta{
+.card__title, .card__meta {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -321,16 +320,12 @@ li {
   min-height: 260px;
   overflow: hidden;
 }
-
-/* endast panelernas bakgrundsbilder, inte ikoner */
 .footer__panel > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.7);
 }
-
-/* toningslager */
 .footer__panel::before {
   content: "";
   position: absolute;
@@ -342,8 +337,6 @@ li {
   );
   z-index: 1;
 }
-
-/* overlay med text och kontaktinfo */
 .footer__overlay {
   position: absolute;
   inset: 0;
@@ -374,8 +367,6 @@ li {
   height: 18px;
   filter: brightness(0) invert(1);
 }
-
-/* hjärtat på höger panel */
 .footer__heart {
   position: absolute;
   inset: 0;
@@ -388,7 +379,6 @@ li {
   height: 140px;
   opacity: 0.95;
 }
-
 .footer__copy {
   text-align: center;
   padding: 1rem;
@@ -414,12 +404,27 @@ li {
     margin: 0 auto;
   }
 }
-
 @media (max-width: 640px) {
   .masthead__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;       /* två kolumner */
     grid-auto-rows: 160px;
   }
+
+  .masthead__photo {
+    grid-column: 1 / -1;                  /* tar upp hela första raden */
+    grid-row: 1;                          /* överst */
+  }
+
+  .masthead__tile--brown {
+    grid-column: 1;                       /* vänster på andra raden */
+    grid-row: 2;
+  }
+
+  .masthead__tile--teal {
+    grid-column: 2;                       /* höger på andra raden */
+    grid-row: 2;
+  }
+  
   .tabs__list {
     flex-wrap: wrap;
     justify-content: center;
