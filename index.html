@@ -15,24 +15,29 @@
             src="assets/images/hand.jpeg"
             alt="Hand som håller jord med småplantor"
           />
-          <!-- Dekorativt hjärta över bilden -->
-          <figcaption class="masthead__heart" aria-hidden="true">
-            <img src="assets/icons/Logo.svg" alt="" />
-            <span class="vh">Dekorativ hjärtikon</span>
+          <!-- Logotyp/hjärta över bilden -->
+          <figcaption class="masthead__heart">
+            <img
+              src="assets/icons/Logo.svg"
+              alt="Planned Planthood-logotyp i form av hjärta"
+            />
+            <span class="vh">Hjärtsymbol placerad mitt på bilden</span>
           </figcaption>
         </figure>
 
         <section class="masthead__tile masthead__tile--brown">
           <span
             class="icon-mask"
-            aria-hidden="true"
+            role="img"
+            aria-label="Ikon: groddplanta"
             style="--icon-url: url('assets/icons/seedling.svg')"
           ></span>
         </section>
         <section class="masthead__tile masthead__tile--teal">
           <span
             class="icon-mask"
-            aria-hidden="true"
+            role="img"
+            aria-label="Ikon: fröpaket"
             style="--icon-url: url('assets/icons/Vectorseedpackage.svg')"
           ></span>
         </section>
@@ -71,7 +76,8 @@
         <figure class="season__icon">
           <span
             class="icon-mask icon-mask--lg"
-            aria-hidden="true"
+            role="img"
+            aria-label="Ikon: fröpaket, symboliserar såsäsong"
             style="--icon-url: url('assets/icons/Vectorseedpackage.svg')"
           ></span>
         </figure>
@@ -81,7 +87,9 @@
             Våren är äntligen här i kollektivet. Lorem ipsum dolor sit amet,
             consectetur adipiscing elit. Venenatis arcu nunc consectetur neque.
           </p>
-          <a class="btn btn--pill" href="#tips">SÅ-TIPS</a>
+          <a class="btn btn--pill" href="#tips" aria-label="Visa såtips"
+            >SÅ-TIPS</a
+          >
         </article>
       </section>
 
@@ -102,14 +110,22 @@
                 alt="Närbild på en gurkplanta"
               />
               <span class="card__badge chip chip--date">15 april 2024</span>
-              <span class="card__glyph" aria-hidden="true"
-                ><img src="assets/icons/plant.svg" alt="" aria-hidden="true"
+              <span class="card__glyph"
+                ><img
+                  src="assets/icons/plant.svg"
+                  alt="Ikon: växtsymbol över bilden"
               /></span>
             </figure>
             <figcaption class="card__body">
               <h4 class="card__title">Gurka</h4>
               <p class="card__meta">Rico Cocío</p>
-              <button class="chip chip--danger" type="button">TA BORT</button>
+              <button
+                class="chip chip--danger"
+                type="button"
+                aria-label="Ta bort: Gurka"
+              >
+                TA BORT
+              </button>
             </figcaption>
           </li>
 
@@ -118,17 +134,25 @@
               <img
                 class="card__img"
                 src="assets/images/tomat.avif"
-                alt="Röda tomater på planta"
+                alt="Röda tomater på planta i soligt läge"
               />
               <span class="card__badge chip chip--date">1 april 2024</span>
-              <span class="card__glyph" aria-hidden="true"
-                ><img src="assets/icons/plant.svg" alt="" aria-hidden="true"
+              <span class="card__glyph"
+                ><img
+                  src="assets/icons/plant.svg"
+                  alt="Ikon: växtsymbol över bilden"
               /></span>
             </figure>
             <figcaption class="card__body">
               <h4 class="card__title">Tomat</h4>
               <p class="card__meta">Roma A</p>
-              <button class="chip chip--danger" type="button">TA BORT</button>
+              <button
+                class="chip chip--danger"
+                type="button"
+                aria-label="Ta bort: Tomat"
+              >
+                TA BORT
+              </button>
             </figcaption>
           </li>
 
@@ -137,17 +161,25 @@
               <img
                 class="card__img"
                 src="assets/images/ärta.avif"
-                alt="Färska sockerärtor på planta"
+                alt="Sockerärtor som klättrar på stöd"
               />
               <span class="card__badge chip chip--date">1 april 2024</span>
-              <span class="card__glyph" aria-hidden="true"
-                ><img src="assets/icons/plant.svg" alt="" aria-hidden="true"
+              <span class="card__glyph"
+                ><img
+                  src="assets/icons/plant.svg"
+                  alt="Ikon: växtsymbol över bilden"
               /></span>
             </figure>
             <figcaption class="card__body">
               <h4 class="card__title">Sockerärtor</h4>
               <p class="card__meta">Frippe</p>
-              <button class="chip chip--danger" type="button">TA BORT</button>
+              <button
+                class="chip chip--danger"
+                type="button"
+                aria-label="Ta bort: Sockerärtor"
+              >
+                TA BORT
+              </button>
             </figcaption>
           </li>
 
@@ -156,17 +188,25 @@
               <img
                 class="card__img"
                 src="assets/images/lilagrönsak.avif"
-                alt="Skördade majrovor i lila och vitt"
+                alt="Skördade lila och vita majrovor"
               />
               <span class="card__badge chip chip--date">1 april 2024</span>
-              <span class="card__glyph" aria-hidden="true"
-                ><img src="assets/icons/plant.svg" alt="" aria-hidden="true"
+              <span class="card__glyph"
+                ><img
+                  src="assets/icons/plant.svg"
+                  alt="Ikon: växtsymbol över bilden"
               /></span>
             </figure>
             <figcaption class="card__body">
               <h4 class="card__title">Majrova</h4>
               <p class="card__meta">Emma på lån</p>
-              <button class="chip chip--danger" type="button">TA BORT</button>
+              <button
+                class="chip chip--danger"
+                type="button"
+                aria-label="Ta bort: Majrova"
+              >
+                TA BORT
+              </button>
             </figcaption>
           </li>
 
@@ -175,17 +215,25 @@
               <img
                 class="card__img"
                 src="assets/images/tomater.avif"
-                alt="Tomater i korg"
+                alt="Nyplockade tomater i korg"
               />
               <span class="card__badge chip chip--date">1 april 2024</span>
-              <span class="card__glyph" aria-hidden="true"
-                ><img src="assets/icons/plant.svg" alt="" aria-hidden="true"
+              <span class="card__glyph"
+                ><img
+                  src="assets/icons/plant.svg"
+                  alt="Ikon: växtsymbol över bilden"
               /></span>
             </figure>
             <figcaption class="card__body">
               <h4 class="card__title">Squash</h4>
               <p class="card__meta">Perra J</p>
-              <button class="chip chip--danger" type="button">TA BORT</button>
+              <button
+                class="chip chip--danger"
+                type="button"
+                aria-label="Ta bort: Squash"
+              >
+                TA BORT
+              </button>
             </figcaption>
           </li>
 
@@ -197,19 +245,31 @@
                 alt="Olika grönsaker i korg"
               />
               <span class="card__badge chip chip--date">1 april 2024</span>
-              <span class="card__glyph" aria-hidden="true"
-                ><img src="assets/icons/plant.svg" alt="" aria-hidden="true"
+              <span class="card__glyph"
+                ><img
+                  src="assets/icons/plant.svg"
+                  alt="Ikon: växtsymbol över bilden"
               /></span>
             </figure>
             <figcaption class="card__body">
               <h4 class="card__title">Blandat</h4>
               <p class="card__meta">Kollektivet</p>
-              <button class="chip chip--danger" type="button">TA BORT</button>
+              <button
+                class="chip chip--danger"
+                type="button"
+                aria-label="Ta bort: Blandat"
+              >
+                TA BORT
+              </button>
             </figcaption>
           </li>
         </ul>
 
-        <p class="plans__more"><a class="btn" href="#">Visa fler</a></p>
+        <p class="plans__more">
+          <a class="btn" href="#" aria-label="Visa fler planteringar"
+            >Visa fler</a
+          >
+        </p>
       </section>
 
       <!-- Tidigare odlingar -->
@@ -222,12 +282,18 @@
             Lorem ipsum dolor sit amet. Sit venenatis arcu nunc consectetur
             neque. Vel amet metus amet eu elit.
           </p>
-          <a class="btn btn--ghost" href="#">Planterade plantor</a>
+          <a
+            class="btn btn--ghost"
+            href="#"
+            aria-label="Visa planterade plantor"
+            >Planterade plantor</a
+          >
         </article>
         <figure class="history__icon">
           <span
             class="icon-mask icon-mask--lg"
-            aria-hidden="true"
+            role="img"
+            aria-label="Ikon: groddplanta, symboliserar historik"
             style="--icon-url: url('assets/icons/seedling.svg')"
           ></span>
         </figure>
@@ -240,7 +306,7 @@
         <figure class="footer__panel">
           <img
             src="assets/images/handsidan.avif"
-            alt="Korg med olika grönsaker i skuggig trädgård"
+            alt="Händer som planterar i jord med grönsaker runtom"
           />
 
           <figcaption class="footer__overlay">
@@ -251,8 +317,7 @@
                 <img
                   class="contact__icon"
                   src="assets/icons/telephone.svg"
-                  alt=""
-                  aria-hidden="true"
+                  alt="Telefon"
                 />
                 <span>0701-234567</span>
               </p>
@@ -260,8 +325,7 @@
                 <img
                   class="contact__icon"
                   src="assets/icons/envelope.svg"
-                  alt=""
-                  aria-hidden="true"
+                  alt="E-post"
                 />
                 <span>mail@mail.se</span>
               </p>
@@ -269,9 +333,12 @@
           </figcaption>
 
           <!-- Dekorativ logotyp -->
-          <section class="footer__heart" aria-hidden="true">
-            <img src="assets/icons/Logo.svg" alt="" />
-            <span class="vh">Dekorativ hjärtikon</span>
+          <section class="footer__heart">
+            <img
+              src="assets/icons/Logo.svg"
+              alt="Planned Planthood-logotyp i form av hjärta"
+            />
+            <span class="vh">Hjärtsymbol centralt placerad</span>
           </section>
         </figure>
       </section>
@@ -283,7 +350,13 @@
 
     <!-- Till toppen-knapp i smal vit list -->
     <p class="backtop">
-      <a href="#top" class="backtop__link">Till toppen av sidan</a>
+      <a
+        href="#top"
+        class="backtop__link"
+        aria-label="Hoppa till sidans början"
+      >
+        Till toppen av sidan
+      </a>
     </p>
   </body>
 </html>
