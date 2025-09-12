@@ -518,9 +518,36 @@ li {
     gap: 1.25rem;
   }
   .footer__flex {
-    height: clamp(180px, 48vw, 220px);
+    height: clamp(300px, 75vw, 420px);
+  }
+  .footer__panel > img {
+    object-fit: cover;
+    object-position: center 30%; 
+  }
+  .footer__flex::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) 58%,
+      rgba(0,0,0,0.65) 58%,
+      rgba(0,0,0,0.65) 100%
+    );
+  }
+  .footer__overlay {
+    display: flex;              
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .5rem;
+    text-align: center;
+    padding: 1rem;
+  }
+  .contact__row {
+    justify-content: space-between;
+    width: 100%;
   }
   .footer__heart {
+    top: 24%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
