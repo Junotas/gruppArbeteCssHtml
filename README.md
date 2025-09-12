@@ -50,5 +50,5 @@ Implementera sidan enligt design (samma fonter, font-storlekar, färger mm.)
 - Ändrat datum-input för plantor
 - Ändrat och placerat sektion ''Säsong att så'' rätt
 - Ändrat titeltext
-- Kollat och ändrat till mer sementisk HTML
+- Kollat och ändrat till mer semantisk HTML
 - Ändrat footer så att den stämmer
