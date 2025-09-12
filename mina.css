@@ -533,6 +533,9 @@ ul>li>a {
   background-color: #8B4513;
   margin-top: 3rem;
   width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer__gallery {
@@ -541,6 +544,9 @@ ul>li>a {
   background-color: #8B4513;
   margin: 0;
   width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer {
@@ -548,6 +554,9 @@ ul>li>a {
   background-color: #8B4513;
   margin-top: 3rem;
   width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer__gallery {
@@ -556,6 +565,9 @@ ul>li>a {
   background-color: #8B4513;
   margin: 0;
   width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer__images {
