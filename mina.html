@@ -4,37 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mina sidor - Planned Planthood</title>
+  <title>Mina sidor</title>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="mina.css">
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ul class="web-lista">
-        <li><a href="#">PLANER</a></li>
-        <li><a href="#">HISTORIK</a></li>
-        <li><a href="#">TIPS</a></li>
-        <li><a href="#">LOGGA UT</a></li>
-      </ul>
 
-      <div class="telefon-lista">
-        <label class="hamburgare-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </div>
-    </nav>
-
-    <div class="header-image">
-      <img class="huvudbild" src="assets/icons/Logo.svg" alt="logga"/>
+  <div class="storlek">
+    <header class="site-header">
+      <nav>
+        <ul class="web-lista">
+          <li><a href="#">PLANER</a></li>
+          <li><a href="#">HISTORIK</a></li>
+          <li><a href="#">TIPS</a></li>
+          <li><a href="#">LOGGA UT</a></li>
+        </ul>
+        
+        <div class="telefon-lista">
+          <label class="hamburgare-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </nav>
       
-      <h1 class="rubrik">Mina sidor</h1>
-    </div>
-  </header>
-
+      <div class="header-image">
+        <img class="huvudbild" src="assets/icons/Logo.svg" alt="logga" />
+        <h1 class="rubrik">Mina sidor</h1>
+      </div>
+    </header>
+  </div>
+    
   <main class="container">
 
     <form class="plantering">
@@ -42,191 +44,202 @@
 
       <div class="form-group">
         <div class="form-control form-control-planta col-50">
-          <label for="planta-input">Planta:</label>
-          <input id="planta-input" name="planta" type="text" />
+          <label for="planta-1">Planta:</label>
+          <input id="planta-1" name="planta-1" type="text" />
         </div>
 
         <div class="form-control form-control-datum col-50">
-          <label for="datum-input">Datum:</label>
-          <input id="datum-input" name="datum" type="" />
+          <label for="datum-1">Datum:</label>
+          <input id="datum-1" name="datum-1" type="" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="form-control form-control-planta col-50">
+          <label for="planta-2">Planta:</label>
+          <input id="planta-2" name="planta-2" type="text" />
+        </div>
+
+        <div class="form-control form-control-datum col-50">
+          <label for="datum-2">Datum:</label>
+          <input id="datum-2" name="datum-2" type="" />
         </div>
       </div>
 
       <button class="knapp" type="submit">LÄGG TILL</button>
     </form>
 
-    <main class="main">
-      <section class="page-header">
-        <h2 class="page-header__title">Mina planteringar</h2>
-        <p class="page-header__text">Här kan du hantera och planera dina planteringar för kolonilotten.</p>
-      </section>
+    <section class="page-header">
+      <h2 class="page-header__title">Mina planteringar</h2>
+      <p class="page-header__text">Här kan du hantera och planera dina planteringar för kolonilotten.</p>
+    </section>
 
-      <section class="planting-dashboard">
-        <ul class="dashboard__stats">
-          <li class="stat-card">
-            <figure class="stat-card__icon">
-              <img src="assets/icons/plant.svg" alt="Växt ikon" class="stat-card__img">
-            </figure>
-            <section class="stat-card__content">
-              <h3 class="stat-card__number">12</h3>
-              <p class="stat-card__label">Aktiva planteringar</p>
-            </section>
-          </li>
-
-          <li class="stat-card">
-            <figure class="stat-card__icon">
-              <img src="assets/icons/seedling.svg" alt="Grodling ikon" class="stat-card__img">
-            </figure>
-            <section class="stat-card__content">
-              <h3 class="stat-card__number">8</h3>
-              <p class="stat-card__label">Redo att skörda</p>
-            </section>
-          </li>
-
-          <li class="stat-card">
-            <figure class="stat-card__icon">
-              <img src="assets/icons/dig.svg" alt="Spade ikon" class="stat-card__img">
-            </figure>
-            <section class="stat-card__content">
-              <h3 class="stat-card__number">5</h3>
-              <p class="stat-card__label">Behöver vattning</p>
-            </section>
-          </li>
-        </ul>
-
-        <section class="dashboard__actions">
-          <button class="action-button action-button--primary">Lägg till ny plantering</button>
-          <button class="action-button action-button--secondary">Visa kalender</button>
-        </section>
-      </section>
-
-      <section class="planting-list">
-        <h3 class="planting-list__title">Mina planteringar</h3>
-        <ul class="planting-list__grid">
-          <article class="planting-card">
-            <figure class="planting-card__image">
-              <img src="assets/images/tomat.avif" alt="Tomater på växt" class="planting-card__img">
-            </figure>
-            <section class="planting-card__content">
-              <h4 class="planting-card__title">Tomater</h4>
-              <p class="planting-card__date">Sådd: 15 mars 2025</p>
-              <p class="planting-card__status planting-card__status--ready">Redo att skörda</p>
-              <section class="planting-card__actions">
-                <button class="planting-card__button">Visa detaljer</button>
-              </section>
-            </section>
-          </article>
-
-          <article class="planting-card">
-            <figure class="planting-card__image">
-              <img src="assets/images/gurka.avif" alt="Gurka på växt" class="planting-card__img">
-            </figure>
-            <section class="planting-card__content">
-              <h4 class="planting-card__title">Gurkor</h4>
-              <p class="planting-card__date">Sådd: 20 mars 2025</p>
-              <p class="planting-card__status planting-card__status--growing">Växer</p>
-              <section class="planting-card__actions">
-                <button class="planting-card__button">Visa detaljer</button>
-              </section>
-            </section>
-          </article>
-
-          <article class="planting-card">
-            <figure class="planting-card__image">
-              <img src="assets/images/ärta.avif" alt="Ärtor på växt" class="planting-card__img">
-            </figure>
-            <section class="planting-card__content">
-              <h4 class="planting-card__title">Ärtor</h4>
-              <p class="planting-card__date">Sådd: 10 mars 2025</p>
-              <p class="planting-card__status planting-card__status--ready">Redo att skörda</p>
-              <section class="planting-card__actions">
-                <button class="planting-card__button">Visa detaljer</button>
-              </section>
-            </section>
-          </article>
-
-          <article class="planting-card">
-            <figure class="planting-card__image">
-              <img src="assets/images/cloesupväxt.avif" alt="Nära bild av växt" class="planting-card__img">
-            </figure>
-            <section class="planting-card__content">
-              <h4 class="planting-card__title">Sallad</h4>
-              <p class="planting-card__date">Sådd: 25 mars 2025</p>
-              <p class="planting-card__status planting-card__status--needs-water">Behöver vattning</p>
-              <section class="planting-card__actions">
-                <button class="planting-card__button">Visa detaljer</button>
-              </section>
-            </section>
-          </article>
-
-          <article class="planting-card">
-            <figure class="planting-card__image">
-              <img src="assets/images/handsidan.avif" alt="Hand som håller jord" class="planting-card__img">
-            </figure>
-            <section class="planting-card__content">
-              <h4 class="planting-card__title">Morötter</h4>
-              <p class="planting-card__date">Sådd: 5 april 2025</p>
-              <p class="planting-card__status planting-card__status--growing">Växer</p>
-              <section class="planting-card__actions">
-                <button class="planting-card__button">Visa detaljer</button>
-              </section>
-            </section>
-          </article>
-
-          <article class="planting-card">
-            <figure class="planting-card__image">
-              <img src="assets/images/vattenkanna.avif" alt="Vattenkanna" class="planting-card__img">
-            </figure>
-            <section class="planting-card__content">
-              <h4 class="planting-card__title">Basilika</h4>
-              <p class="planting-card__date">Sådd: 12 april 2025</p>
-              <p class="planting-card__status planting-card__status--needs-water">Behöver vattning</p>
-              <section class="planting-card__actions">
-                <button class="planting-card__button">Visa detaljer</button>
-              </section>
-            </section>
-          </article>
-        </ul>
-      </section>
-
-      <section class="calendar-section">
-        <h3 class="calendar-section__title">Planeringskalender</h3>
-        <section class="calendar-section__content">
-          <section class="calendar-section__text">
-            <p>Här kan du se när olika grönsaker ska sås och skördas baserat på din plats och väderförhållanden.</p>
-            <button class="calendar-section__button">Öppna kalender</button>
+    <section class="planting-dashboard">
+      <ul class="dashboard__stats">
+        <li class="stat-card">
+          <figure class="stat-card__icon">
+            <img src="assets/icons/plant.svg" alt="Växt ikon" class="stat-card__img">
+          </figure>
+          <section class="stat-card__content">
+            <h3 class="stat-card__number">12</h3>
+            <p class="stat-card__label">Aktiva planteringar</p>
           </section>
-          <figure class="calendar-section__image">
-            <img src="assets/images/tjejmedhatt.avif" alt="Tjej med hatt i trädgård" class="calendar-section__img">
+        </li>
+
+        <li class="stat-card">
+          <figure class="stat-card__icon">
+            <img src="assets/icons/seedling.svg" alt="Grodling ikon" class="stat-card__img">
           </figure>
+          <section class="stat-card__content">
+            <h3 class="stat-card__number">8</h3>
+            <p class="stat-card__label">Redo att skörda</p>
+          </section>
+        </li>
+
+        <li class="stat-card">
+          <figure class="stat-card__icon">
+            <img src="assets/icons/dig.svg" alt="Spade ikon" class="stat-card__img">
+          </figure>
+          <section class="stat-card__content">
+            <h3 class="stat-card__number">5</h3>
+            <p class="stat-card__label">Behöver vattning</p>
+          </section>
+        </li>
+      </ul>
+
+      <section class="dashboard__actions">
+        <button class="action-button action-button--primary">Lägg till ny plantering</button>
+        <button class="action-button action-button--secondary">Visa kalender</button>
+      </section>
+    </section>
+
+    <section class="planting-list">
+      <h3 class="planting-list__title">Mina planteringar</h3>
+      <ul class="planting-list__grid">
+        <article class="planting-card">
+          <figure class="planting-card__image">
+            <img src="assets/images/tomat.avif" alt="Tomater på växt" class="planting-card__img">
+          </figure>
+          <section class="planting-card__content">
+            <h4 class="planting-card__title">Tomater</h4>
+            <p class="planting-card__date">Sådd: 15 mars 2025</p>
+            <p class="planting-card__status planting-card__status--ready">Redo att skörda</p>
+            <section class="planting-card__actions">
+              <button class="planting-card__button">Visa detaljer</button>
+            </section>
+          </section>
+        </article>
+
+        <article class="planting-card">
+          <figure class="planting-card__image">
+            <img src="assets/images/gurka.avif" alt="Gurka på växt" class="planting-card__img">
+          </figure>
+          <section class="planting-card__content">
+            <h4 class="planting-card__title">Gurkor</h4>
+            <p class="planting-card__date">Sådd: 20 mars 2025</p>
+            <p class="planting-card__status planting-card__status--growing">Växer</p>
+            <section class="planting-card__actions">
+              <button class="planting-card__button">Visa detaljer</button>
+            </section>
+          </section>
+        </article>
+
+        <article class="planting-card">
+          <figure class="planting-card__image">
+            <img src="assets/images/ärta.avif" alt="Ärtor på växt" class="planting-card__img">
+          </figure>
+          <section class="planting-card__content">
+            <h4 class="planting-card__title">Ärtor</h4>
+            <p class="planting-card__date">Sådd: 10 mars 2025</p>
+            <p class="planting-card__status planting-card__status--ready">Redo att skörda</p>
+            <section class="planting-card__actions">
+              <button class="planting-card__button">Visa detaljer</button>
+            </section>
+          </section>
+        </article>
+
+        <article class="planting-card">
+          <figure class="planting-card__image">
+            <img src="assets/images/cloesupväxt.avif" alt="Nära bild av växt" class="planting-card__img">
+          </figure>
+          <section class="planting-card__content">
+            <h4 class="planting-card__title">Sallad</h4>
+            <p class="planting-card__date">Sådd: 25 mars 2025</p>
+            <p class="planting-card__status planting-card__status--needs-water">Behöver vattning</p>
+            <section class="planting-card__actions">
+              <button class="planting-card__button">Visa detaljer</button>
+            </section>
+          </section>
+        </article>
+
+        <article class="planting-card">
+          <figure class="planting-card__image">
+            <img src="assets/images/handsidan.avif" alt="Hand som håller jord" class="planting-card__img">
+          </figure>
+          <section class="planting-card__content">
+            <h4 class="planting-card__title">Morötter</h4>
+            <p class="planting-card__date">Sådd: 5 april 2025</p>
+            <p class="planting-card__status planting-card__status--growing">Växer</p>
+            <section class="planting-card__actions">
+              <button class="planting-card__button">Visa detaljer</button>
+            </section>
+          </section>
+        </article>
+
+        <article class="planting-card">
+          <figure class="planting-card__image">
+            <img src="assets/images/vattenkanna.avif" alt="Vattenkanna" class="planting-card__img">
+          </figure>
+          <section class="planting-card__content">
+            <h4 class="planting-card__title">Basilika</h4>
+            <p class="planting-card__date">Sådd: 12 april 2025</p>
+            <p class="planting-card__status planting-card__status--needs-water">Behöver vattning</p>
+            <section class="planting-card__actions">
+              <button class="planting-card__button">Visa detaljer</button>
+            </section>
+          </section>
+        </article>
+      </ul>
+    </section>
+
+    <section class="calendar-section">
+      <h3 class="calendar-section__title">Planeringskalender</h3>
+      <section class="calendar-section__content">
+        <section class="calendar-section__text">
+          <p>Här kan du se när olika grönsaker ska sås och skördas baserat på din plats och väderförhållanden.</p>
+          <button class="calendar-section__button">Öppna kalender</button>
         </section>
+        <figure class="calendar-section__image">
+          <img src="assets/images/tjejmedhatt.avif" alt="Person med hatt i trädgård" class="calendar-section__img">
+        </figure>
       </section>
-    </main>
+    </section>
+  </main>
 
-    <footer class="footer" id="kontakt">
-      <section class="footer__gallery">
-        <div class="footer__images">
-          <figure class="footer__image">
-            <img src="assets/images/tomat.avif" alt="Röda tomater på planta" class="footer__img">
-          </figure>
-          <figure class="footer__image">
-            <img src="assets/images/gurka.avif" alt="Närbild på en gurkplanta" class="footer__img">
-          </figure>
-          <figure class="footer__image">
-            <img src="assets/images/ärta.avif" alt="Sockerärtor som klättrar på stöd" class="footer__img">
-          </figure>
-          <figure class="footer__image">
-            <img src="assets/images/tjejmedhatt.avif" alt="Tjej med hatt" class="footer__img">
-          </figure>
-        </div>
+  <footer class="footer" id="kontakt">
+    <section class="footer__content">
+      <section class="footer__section">
+        <h4 class="footer__title">Kontakt</h4>
+        <ul class="footer__contact">
+          <li class="footer__contact-item">
+            <img src="assets/icons/telephone.svg" alt="Telefon ikon" class="footer__icon">
+            <span class="footer__text">+46 123 456 789</span>
+          </li>
+          <li class="footer__contact-item">
+            <img src="assets/icons/envelope.svg" alt="E-post ikon" class="footer__icon">
+            <span class="footer__text">info@plannedplanthood.se</span>
+          </li>
+        </ul>
       </section>
-
-      <div class="backtop">
-        <a href="index.html" class="backtop__link" aria-label="Gå tillbaka till startsidan">
-          Till toppen av sidan
-        </a>
-      </div>
-    </footer>
+      <section class="footer__section">
+        <h4 class="footer__title">Följ oss</h4>
+        <p class="footer__text">Få tips och inspiration för din trädgård</p>
+      </section>
+    </section>
+    <section class="footer__bottom">
+      <p class="footer__copyright">&copy; 2025 Planned Planthood. Alla rättigheter förbehållna.</p>
+    </section>
+  </footer>
   </main>
 </body>
 

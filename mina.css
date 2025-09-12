@@ -1,5 +1,9 @@
 body {
-  margin: 0 !important
+  margin: 0 !important;
+}
+.storlek{
+  max-width: 1000px;  
+  margin: 0 auto;      
 }
 
 ul {
@@ -28,7 +32,7 @@ ul>li>a {
 }
 
 .container {
-  width: 60%;
+  width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -59,15 +63,16 @@ ul>li>a {
 }
 
 .header-image {
-  background: url('assets/images/handsidan.avif');
-  background-position: center;
-  object-fit: cover;
-  background-size: cover;
+  background: url('assets/images/handsidan.avif') center/cover no-repeat;
   height: 400px;
   display: flex;
   align-items: center;
   flex-direction: column;
   color: white;
+
+  max-width: 1000px;  
+  margin: 0 auto;
+  width: 100%;      
 }
 
 .header-image>img {
@@ -131,8 +136,15 @@ ul>li>a {
 }
 
 @media screen and (max-width: 768px) {
+
   .container {
     width: 100%;
+  }
+
+
+  .header-image {
+    max-width: 100%;   
+    border-radius: 0;  
   }
 
   .web-lista {
@@ -149,6 +161,9 @@ ul>li>a {
   .plantering {
     flex-direction: column;
     padding: 0 !important;
+  }
+  .plantering .form-group:nth-of-type(n+2) {
+    display: none;
   }
 
   .plantering>h2 {
@@ -577,7 +592,7 @@ ul>li>a {
     gap: 0.25rem;
     padding: 0 0.75rem;
   }
-  
+
   .footer__img {
     height: 150px;
   }
@@ -589,7 +604,7 @@ ul>li>a {
     gap: 0.25rem;
     padding: 0 0.5rem;
   }
-  
+
   .footer__img {
     height: 120px;
   }
