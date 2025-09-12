@@ -35,15 +35,6 @@ Detta projekt är en webbplats för trädgårdsplanering som hjälper användare
 
 **Varför:** Grid är perfekt för tvådimensionella layouter, Flexbox för endimensionella. Olika verktyg för olika behov.
 
-### BEM Namngivning
-**Krav:** Konsekvent BEM-namngivning genom hela projektet.
-
-**Vad vi gjorde:**
-- Använde Block__Element--Modifier struktur
-- Exempel: `.nav__logo`, `.hero__button`, `.feature-card__title`
-
-**Varför:** BEM gör koden självförklarande och förhindrar CSS-konflikter.
-
 ### Tillgänglighet
 **Krav:** Alt-texter för alla bilder.
 
