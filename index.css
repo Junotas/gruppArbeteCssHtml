@@ -57,6 +57,16 @@ img {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+.plans__more {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.plans__more .btn {
+  display: inline-block;
+}
+
+
 /* ===== Typography (clamp) ===== */
 .title {
   text-align: center;
@@ -196,13 +206,11 @@ li {
 .season__content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* texten förblir vänsterställd */
+  align-items: flex-start;
 }
-
 .season__content .btn {
-  align-self: flex-end; /* knappen hoppar höger i kolumnen */
+  align-self: flex-end;
 }
-
 .season__title {
   margin-bottom: 0.5rem;
 }
@@ -338,6 +346,12 @@ li {
   gap: 2rem;
   align-items: center;
   margin-top: 2.5rem;
+}
+.history__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
 }
 .history__lead {
   color: var(--muted);
@@ -512,18 +526,16 @@ li {
   }
   .season {
     display: flex;
-    flex-direction: column-reverse; /* byter ordning */
+    flex-direction: column-reverse;
     align-items: center;
     text-align: center;
     gap: 1.25rem;
   }
-
   .season__icon {
     width: 220px;
     height: 220px;
-    margin-top: 1rem; /* lite luft ovanför ikonen */
+    margin-top: 1rem;
   }
-
   .season__content {
     display: flex;
     flex-direction: column;
@@ -531,7 +543,6 @@ li {
     gap: 0.75rem;
     max-width: 90%;
   }
-
   .btn--pill {
     border-radius: 20px;
     padding: 0.65rem 1.5rem;
@@ -539,6 +550,26 @@ li {
     align-self: center;
   }
   .season__content .btn {
+    align-self: center;
+  }
+
+  /* History mobilfix */
+  .history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+  }
+  .history__icon {
+    order: -1;
+    margin-bottom: 0.5rem;
+  }
+  .history__text {
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .history__text .btn {
     align-self: center;
   }
 }
