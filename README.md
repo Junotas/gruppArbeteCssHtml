@@ -41,3 +41,10 @@ Två css-filer (en för index och en för mina sidor).
 
 (x) Tillgänglighet – alt-texter - Alla bilder ska ha beskrivande alt-texter.
 Implementera sidan enligt design (samma fonter, font-storlekar, färger mm.) 
+
+# Feedback & ändringar
+
+- Ändrat header så att den inte ligger i main i mina.html
+- Ändrat och omstrukturerat navBar i index.html 
+- Ändrat till rätt ikoner i headern i index.html
+- 
