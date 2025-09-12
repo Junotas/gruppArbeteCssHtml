@@ -1,16 +1,11 @@
-*inserts placeholder text* 
 
-*dosen't work*
-
-*throws computer out of the window*
-
-Projektbeskrivning
+# Projektbeskrivning - Grupp 5
 
 Vi har byggt en enkel webbplats som handlar om plantering. På sidan kan man lägga till nya planteringar via ett formulär. Sidan är responsiv och fungerar både på dator och mobil.
 
-Tekniker vi har använt
+## Tekniker vi har använt
 
-HTML:
+# HTML:
 
 Semantiska taggar som  header, main, nav, formulär och rubriker.
 
@@ -18,7 +13,7 @@ Ett formulär med inputs för planta och datum.
 
 Två html-sidor: en startsida och en undersida (“Mina sidor”).
 
-CSS:
+# CSS:
 
 Flexbox för menyer, formulär och layout.
 
