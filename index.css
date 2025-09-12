@@ -143,20 +143,23 @@ li {
   background: #fff;
   border-top: 1px solid var(--neutral-200);
   border-bottom: 1px solid var(--neutral-200);
+  display: flex;       
+  justify-content: center;    
 }
 .tabs__list {
   list-style: none;
   display: flex;
-  gap: 1.25rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: space-around; /* sprider jämnt */
+  gap: 0;
+  width: 100%;
   padding: 0.75rem 1rem;
 }
 .tabs__link {
   text-decoration: none;
   color: var(--ink-800);
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 1.25rem;
   border-radius: 999px;
+  transition: background 0.3s ease;
 }
 .tabs__link:hover {
   background: var(--tint);
@@ -501,10 +504,6 @@ li {
     grid-row: 2;
   }
 
-  .tabs__list {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
   .cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
