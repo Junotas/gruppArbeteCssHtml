@@ -47,4 +47,8 @@ Implementera sidan enligt design (samma fonter, font-storlekar, färger mm.)
 - Ändrat header så att den inte ligger i main i mina.html
 - Ändrat och omstrukturerat navBar i index.html 
 - Ändrat till rätt ikoner i headern i index.html
-- 
+- Ändrat datum-input för plantor
+- Ändrat och placerat sektion ''Säsong att så'' rätt
+- Ändrat titeltext
+- Kollat och ändrat till mer sementisk HTML
+- Ändrat footer så att den stämmer
